@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="%svelte.assets%/assets/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="preload"
+			href="/fonts/Inconsolata-SemiBold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<style>
+			@font-face {
+				font-family: 'Inconsolata SemiBold';
+				font-display: swap;
+				src: url(/fonts/Inconsolata-SemiBold.woff2) format('woff2');
+			}
+
+			* {
+				box-sizing: border-box;
+				cursor: none;
+			}
+
+			:root {
+				font-family: 'Inconsolata SemiBold', sans-serif;
+				color: var(--white);
+				--yellow: #f8f32b;
+				--bg: #181817;
+				--dark-gray: #242423;
+				--gray: #ffffff35;
+				--light-gray: #c5c5c5;
+				--white: #fff;
+			}
+
+			body {
+				margin: 0;
+				background: var(--bg);
+			}
+
+			html ::selection {
+				color: var(--dark-gray);
+				background: #f8f32b;
+				box-shadow: none;
+			}
+
+			.cursor {
+				z-index: 9999;
+				pointer-events: none;
+				border-radius: 50%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+
+			.cursor-dot {
+				width: 6px;
+				height: 6px;
+				background: var(--white);
+			}
+
+			.cursor-circle {
+				width: 50px;
+				height: 50px;
+				border: 3px solid var(--yellow);
+				mix-blend-mode: difference;
+				transition: transform 0.1s;
+			}
+		</style>
+		%svelte.head%
+	</head>
+	<body>
+		<div class="cursor cursor-dot"></div>
+		<div class="cursor cursor-circle"></div>
+		<div>%svelte.body%</div>
+	</body>
+</html>

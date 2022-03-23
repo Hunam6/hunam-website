@@ -1,0 +1,115 @@
+<script>
+	import Image from 'svelte-image';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	onMount(() => {
+		if (!('ontouchstart' in document.documentElement)) {
+			const cursorDot = document.querySelector('.cursor-dot');
+			const cursorCircle = document.querySelector('.cursor-circle');
+			const nav = document.querySelector('nav');
+
+			cursorDot.style.display = 'block';
+			cursorCircle.style.display = 'block';
+			gsap.to(cursorDot, {
+				scale: 1,
+				duration: 0.4
+			});
+			cursorCircle.style.backgroundColor = 'transparent';
+
+			window.addEventListener('mousemove', cursor);
+			function cursor(e) {
+				gsap.to(cursorDot, {
+					x: Math.round(e.clientX - 3),
+					y: Math.round(e.clientY - 3),
+					duration: 0
+				});
+				gsap.to(cursorCircle, {
+					x: Math.round(e.clientX - 25),
+					y: Math.round(e.clientY - 25),
+					duration: 0.8
+				});
+			}
+
+			nav.addEventListener('mouseleave', () => {
+				gsap.to(cursorDot, {
+					scale: 1,
+					duration: 0.4
+				});
+				cursorCircle.style.backgroundColor = 'transparent';
+			});
+			nav.addEventListener('mouseover', () => {
+				gsap.to(cursorDot, {
+					scale: 0,
+					duration: 0.4
+				});
+				cursorCircle.style.backgroundColor = 'var(--yellow)';
+			});
+		}
+	});
+</script>
+
+<header>
+	<span>
+		<Image src="/assets/favicon.png" alt="Hunam logo" lazy={false} wrapperClass="hunam-wrapper" />
+		<h2>Hunam</h2>
+	</span>
+	<nav>
+		<a href="/">/home</a>
+		<a href="/projects">/projects</a>
+		<a href="/posts">/posts</a>
+		<a href="/contact">/contact</a>
+	</nav>
+</header>
+<slot />
+
+<style>
+	header {
+		margin-top: 0.5rem;
+	}
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	:global(.hunam-wrapper) {
+		margin-right: 2rem;
+		width: 5vh !important;
+		display: flex !important;
+		align-items: center;
+	}
+	h2 {
+		color: var(--white);
+		font-weight: 600;
+	}
+
+	nav {
+		text-align: center;
+		margin-top: 1rem;
+	}
+	a {
+		text-decoration: none;
+		color: var(--yellow);
+		margin: auto 0.25rem;
+		font-size: 1.125rem;
+	}
+
+	@media (min-width: 768px) {
+		header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			margin-top: 2rem;
+		}
+
+		nav {
+			margin-top: 0;
+			padding-left: 1rem;
+		}
+		a {
+			padding: 1rem;
+		}
+	}
+</style>
