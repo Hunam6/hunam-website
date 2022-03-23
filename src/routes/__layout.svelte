@@ -55,6 +55,8 @@
       alt="Hunam logo"
       lazy={false}
       wrapperClass="hunam-wrapper"
+      width="50"
+      height="50"
     />
     <h2>Hunam</h2>
   </span>
