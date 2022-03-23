@@ -4,7 +4,8 @@ import image from 'svelte-image'
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    inlineStyleThreshold: 1024
   },
   preprocess: [image()]
 }
