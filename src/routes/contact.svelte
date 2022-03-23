@@ -107,7 +107,6 @@
   @media (min-width: 768px) {
     article {
       margin-bottom: 5rem;
-      height: 40vh;
       width: 32.5vw;
       padding: 2rem;
     }
