@@ -65,6 +65,7 @@
       src="/assets/favicon.png"
       alt="Hunam logo"
       lazy={false}
+      class="hunam-img"
       wrapperClass="hunam-wrapper"
       width="50"
       height="50"
@@ -89,6 +90,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  :global(.hunam-img) {
+    width: auto;
+    height: auto;
   }
 
   :global(.hunam-wrapper) {

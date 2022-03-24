@@ -29,6 +29,9 @@
     }
   </style>
 </svelte:head>
+<aside>
+  <p>Carefully crafted with ❤️ by myself</p>
+</aside>
 <main>
   <section>
     <Image
@@ -60,6 +63,35 @@
     font-family: 'Inconsolata Expanded Black';
     font-display: swap;
     src: url(/fonts/Inconsolata-Expanded-Black.woff2) format('woff2');
+  }
+  @keyframes go-out {
+    to {
+      top: -100vw;
+      left: -100vw;
+      display: none;
+    }
+  }
+
+  aside {
+    position: absolute;
+    top: 10vw;
+    left: -28vw;
+    width: 100vw;
+    height: 5vw;
+    padding: 0;
+    background: var(--yellow);
+    transform-origin: center;
+    transform: rotate(-30deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: go-out 10s ease-in-out 3s forwards;
+  }
+  aside > p {
+    color: var(--bg);
+    margin: 0;
+    text-align: center;
+    font-size: 0.6rem;
   }
 
   section {
@@ -134,6 +166,16 @@
   }
 
   @media (min-width: 768px) {
+    aside {
+      top: 10vh;
+      left: -85vh;
+      width: 100vw;
+      height: 2rem;
+    }
+    aside > p {
+      font-size: 1rem;
+    }
+
     section {
       background: url('/assets/stroke-desktop.svg') no-repeat;
       margin: 25vh 20vw 0 15vw;
