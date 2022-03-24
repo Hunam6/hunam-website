@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare'
+import adapter from '@sveltejs/adapter-auto'
 import image from 'svelte-image'
 
 /** @type {import('@sveltejs/kit').Config} */
