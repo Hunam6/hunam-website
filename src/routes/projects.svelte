@@ -1,5 +1,11 @@
 <script>
   import Image from 'svelte-image'
+  import { onMount } from 'svelte'
+  import { addLinkHoverEffect } from './__layout.svelte'
+
+  onMount(() => {
+    addLinkHoverEffect()
+  })
 </script>
 
 <svelte:head>

@@ -1,12 +1,36 @@
+<script context="module">
+  export function addLinkHoverEffect() {
+    const cursorDot = document.querySelector('.cursor-dot')
+    const cursorCircle = document.querySelector('.cursor-circle')
+
+    document.querySelectorAll('a').forEach(el => {
+      el.addEventListener('mouseleave', () => {
+        gsap.to(cursorDot, {
+          scale: 1,
+          duration: 0.4
+        })
+        cursorCircle.style.backgroundColor = 'transparent'
+      })
+      el.addEventListener('mouseover', () => {
+        gsap.to(cursorDot, {
+          scale: 0,
+          duration: 0.4
+        })
+        cursorCircle.style.backgroundColor = 'var(--yellow)'
+      })
+    })
+  }
+</script>
+
 <script>
   import Image from 'svelte-image'
   import { onMount } from 'svelte'
   import { gsap } from 'gsap'
+
   onMount(() => {
     if (!('ontouchstart' in document.documentElement)) {
       const cursorDot = document.querySelector('.cursor-dot')
       const cursorCircle = document.querySelector('.cursor-circle')
-      const nav = document.querySelector('nav')
 
       cursorDot.style.display = 'block'
       cursorCircle.style.display = 'block'
@@ -30,20 +54,7 @@
         })
       }
 
-      nav.addEventListener('mouseleave', () => {
-        gsap.to(cursorDot, {
-          scale: 1,
-          duration: 0.4
-        })
-        cursorCircle.style.backgroundColor = 'transparent'
-      })
-      nav.addEventListener('mouseover', () => {
-        gsap.to(cursorDot, {
-          scale: 0,
-          duration: 0.4
-        })
-        cursorCircle.style.backgroundColor = 'var(--yellow)'
-      })
+      addLinkHoverEffect()
     }
   })
 </script>

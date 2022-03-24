@@ -1,3 +1,12 @@
+<script>
+  import { onMount } from 'svelte'
+  import { addLinkHoverEffect } from './__layout.svelte'
+
+  onMount(() => {
+    addLinkHoverEffect()
+  })
+</script>
+
 <svelte:head>
   <title>Hunam - Contact</title>
   <meta
