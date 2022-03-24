@@ -6,6 +6,3 @@ node_modules
 
 #SvelteKit
 .svelte-kit/
-
-# Website
-static/g/
