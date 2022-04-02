@@ -73,10 +73,10 @@
     <h2>Hunam</h2>
   </span>
   <nav>
-    <a href="/">/home</a>
-    <a href="/projects">/projects</a>
-    <a href="/posts">/posts</a>
-    <a href="/contact">/contact</a>
+    <a sveltekit:prefetch href="/">/home</a>
+    <a sveltekit:prefetch href="/projects">/projects</a>
+    <a sveltekit:prefetch href="/posts">/posts</a>
+    <a sveltekit:prefetch href="/contact">/contact</a>
   </nav>
 </header>
 <slot />
