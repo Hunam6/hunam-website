@@ -3,7 +3,9 @@
   <p><b><a href="https://hunam.me">hunam.me</a></b></p>
 </div>
 
-## Run locally (requires [Node](https://nodejs.org) and [PNpM](https://pnpm.io))
+---
+
+### Run locally (requires [Node](https://nodejs.org) and [PNpM](https://pnpm.io))
 ```
 pnpm dev
 ```
