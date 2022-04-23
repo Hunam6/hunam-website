@@ -18,6 +18,9 @@
         document.getElementById('heart-1').style.display = 'block'
         document.getElementById('heart-2').style.display = 'block'
         document.getElementById('yo').style.display = 'block'
+        new Audio(
+          'https://www.mboxdrive.com/Souhaiter%20un%20bon%20anniversaire%20en%20japonais%20_%20Musique%20au%20Japon.mp3'
+        ).play()
         // error
       } else if (
         keyPressed.length === solution.length ||
