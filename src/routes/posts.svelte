@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
 
   onMount(() => {
-    let solution = 'xuor draner'.split('')
+    let solution = 'XUOR DRANER'.split('')
     let keyPressed = []
 
     document.addEventListener('keydown', ev => {
