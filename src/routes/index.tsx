@@ -30,7 +30,7 @@ export default component$(() => {
           md:pt-32"
       >
         <img
-          src="/assets/me.jpg"
+          src="/assets/me.webp"
           alt="A photo of myself with a cool bucket hat."
           class="
             absolute top-0 -right-5 h-32
