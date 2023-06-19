@@ -1,0 +1,33 @@
+.toc {
+  @apply absolute left-0 hidden w-2/12 border-l-2 border-yellow pl-10 md:block;
+}
+
+.toc-link {
+  @apply cursor-none py-1.5 no-underline;
+}
+
+.icon-link {
+  @apply mr-2 inline-block h-4 w-4 bg-[url('/assets/icons/link.svg')];
+}
+
+.note,
+.warning {
+  @apply block text-lg font-bold not-italic;
+  @apply before:mr-2 before:inline-block before:h-3.5 before:w-3.5;
+}
+
+.note {
+  @apply before:bg-[url('/assets/icons/note.svg')];
+}
+
+.warning {
+  @apply before:bg-[url('/assets/icons/warning.svg')];
+}
+
+p > code {
+  @apply text-sm;
+}
+
+p > a {
+  @apply underline;
+}
