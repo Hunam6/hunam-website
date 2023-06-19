@@ -1,0 +1,13 @@
+.custom-text-shadow-1 {
+  text-shadow: -3px -3px 0 #181817, 3px -3px 0 #181817, -3px 3px 0 #181817,
+    3px 3px 0 #181817, 4px 4px 0 #f8f32b, 5px 5px 0 #f8f32b, 6px 6px 0 #f8f32b,
+    7px 7px 0 #f8f32b;
+}
+.custom-text-shadow-1::selection {
+  text-shadow: none;
+}
+
+.custom-text-shadow-2 {
+  text-shadow: -1px 0 0 #f8f32b, -1px 1px 0 #f8f32b, 0 -1px 0 #f8f32b,
+    0 1px 0 #f8f32b, 1px -1px 0 #f8f32b, 1px 0 0 #f8f32b;
+}
