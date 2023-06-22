@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import { Image } from "@unpic/qwik";
 import { ScrollDownIcon } from "~/components/icons/scroll-down";
-import { Project, type ProjectProps } from "~/components/project/project";
+import { Project, type ProjectProps } from "~/components/cards/project";
 
 export default component$(() => {
   const projects: ProjectProps[] = [
@@ -40,6 +40,7 @@ export default component$(() => {
       link: "https://github.com/vlang/v",
     },
   ];
+
   return (
     <>
       <section>
@@ -59,9 +60,7 @@ export default component$(() => {
         </div>
         <h2 class="mx-10 mt-16 text-lg md:ml-80 md:mr-[50%] md:text-2xl">
           Hi! I'm Elie Tattevin-Drevet (aka{" "}
-          <Link href="https://github.com/hunam6" class="underline">
-            Hunam
-          </Link>
+          <Link href="https://github.com/hunam6">Hunam</Link>
           ). I'm a software engineer born in France and living in Finland.
         </h2>
         <ScrollDownIcon class="mx-auto w-auto h-16 my-10 md:absolute md:left-0 md:right-0 md:bottom-5" />

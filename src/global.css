@@ -39,4 +39,9 @@ body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  text-underline-offset: 4px;
+}
+
+a {
+  text-decoration: underline;
 }

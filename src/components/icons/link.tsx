@@ -9,6 +9,7 @@ export function LinkIcon(props: QwikIntrinsicElements["svg"], key: string) {
       viewBox="0 0 24 24"
       {...props}
       key={key}
+      class="inline"
     >
       <path
         fill="currentColor"
