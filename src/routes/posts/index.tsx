@@ -19,7 +19,7 @@ export default component$(() => {
   ];
   return (
     <>
-      <section class="flex flex-col mt-24 mx-5 gap-8 md:mx-96 md:mt-40">
+      <section class="flex flex-col pt-24 pb-12 min-h-screen justify-center mx-5 gap-8 md:mx-96 md:pt-40">
         {posts.map((post, idx) => (
           <Post {...post} key={idx} />
         ))}
