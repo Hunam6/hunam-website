@@ -11,7 +11,7 @@ export const Info = component$<InfoProps>((props) => {
     <article class="flex justify-between text-lg md:text-2xl">
       <p>{props.name}</p>
       {props.URL ? (
-        <a href={props.URL} class="font-mono text-sm md:text-lg">
+        <a href={props.URL} class="font-mono text-sm md:text-lg underline">
           {props.value}
         </a>
       ) : (

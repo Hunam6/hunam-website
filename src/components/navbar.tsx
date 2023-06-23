@@ -6,26 +6,13 @@ export const NavBar = component$(() => {
 
   return (
     <nav class="absolute left-0 right-0 top-1 flex items-center md:bg-black justify-around gap-5 text-2xl border-3 rounded-full m-5 p-1 z-10 md:w-1/3 md:mx-auto md:mt-10 md:py-4 md:text-3xl">
-      <Link
-        href="/"
-        class={pathName === "/" ? "font-bold no-underline" : "no-underline"}
-      >
+      <Link href="/" class={pathName === "/" ? "font-bold" : ""}>
         Home
       </Link>
-      <Link
-        href="/posts"
-        class={
-          pathName === "/posts/" ? "font-bold no-underline" : "no-underline"
-        }
-      >
+      <Link href="/posts" class={pathName === "/posts/" ? "font-bold" : ""}>
         Posts
       </Link>
-      <Link
-        href="/about"
-        class={
-          pathName === "/about/" ? "font-bold no-underline" : "no-underline"
-        }
-      >
+      <Link href="/about" class={pathName === "/about/" ? "font-bold" : ""}>
         About
       </Link>
     </nav>

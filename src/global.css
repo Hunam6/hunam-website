@@ -40,8 +40,5 @@ body {
   color: white;
   overflow-x: hidden;
   text-underline-offset: 4px;
-}
-
-a {
-  text-decoration: underline;
+  font-weight: 300;
 }
