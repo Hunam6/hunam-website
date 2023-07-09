@@ -330,20 +330,34 @@ services:
     ports:
       - 8080:8080
     restart: unless-stopped
-  rtorrent-flood:
-    image: jesec/rtorrent-flood:latest
-    container_name: library-rtorrent-flood
-    user: ${PUID}:${PGID}
-    command: --host 0.0.0.0 --rundir=/data
+  flood:
+    image: jesec/flood
+    container_name: library-flood
     env_file:
       - .env
     environment:
       - HOME=/config
+    command: --port 3000 --allowedpath /data/torrent
+    user: ${PUID}:${PGID}
     volumes:
       - ./config/rtorrent-flood:/config
       - ./data/torrent:/data/torrent
     ports:
       - 3000:3000
+    restart: unless-stopped
+  rtorrent:
+    image: jesec/rtorrent
+    container_name: library-rtorrent
+    env_file:
+      - .env
+    environment:
+      - HOME=/config
+    command: -o network.port_range.set=6881-6881,system.daemon.set=true
+    user: ${PUID}:${PGID}
+    volumes:
+      - ./config/rtorrent-flood:/config
+      - ./data/torrent:/data/torrent
+    ports:
       - 6881:6881
     restart: unless-stopped
   #Manage
