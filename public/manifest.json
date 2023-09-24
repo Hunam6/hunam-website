@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Hunam's personal website",
-  "short_name": "Hunam",
+  "name": "hunam-website",
+  "short_name": "Elie TD aka. Hunam's website",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#181817",
-  "description": "My personal website & portfolio."
+  "background_color": "#000",
+  "description": "Elie TD aka. Hunam's website."
 }

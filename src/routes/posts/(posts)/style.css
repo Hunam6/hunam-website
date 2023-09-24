@@ -1,0 +1,16 @@
+.toc {
+  @apply hidden md:block absolute left-0 max-w-[25vw] border-l-4 border-l-orange-300;
+}
+
+.toc-level {
+  @apply list-none pl-4;
+}
+
+.toc-link {
+  @apply no-underline;
+}
+
+blockquote > p > strong {
+  @apply underline decoration-2;
+}
+
