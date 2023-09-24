@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "hunam-website",
-  "short_name": "My personal website/portfolio",
+  "short_name": "Elie TD aka. Hunam's website",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#000",
-  "description": "My personal website/portfolio, built with Qwik(City)."
+  "description": "Elie TD aka. Hunam's website."
 }

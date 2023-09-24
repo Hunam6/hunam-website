@@ -1,15 +1,14 @@
 import { component$ } from "@builder.io/qwik";
-import { Image, type ImageProps } from "@unpic/qwik";
 
-export interface PostProps {
+export interface PostcardProps {
   title: string;
   slug: string;
   date: string;
   editedDate?: string;
-  image: ImageProps;
+  image: any;
 }
 
-export const Post = component$<PostProps>((props) => {
+export const Postcard = component$<PostcardProps>((props) => {
   const date = new Date(props.date).toLocaleString(undefined, {
     day: "numeric",
     month: "long",
@@ -23,18 +22,17 @@ export const Post = component$<PostProps>((props) => {
       year: "numeric",
     });
   return (
-    <article class="border-3 border-gray rounded-3xl p-3 md:flex">
+    <article class="border-2 border-orange-300 rounded-3xl p-3 md:flex">
       <a href={"/posts/" + props.slug} class="md:w-1/2 md:m-5">
-        <Image {...props.image} class="rounded-2xl" />
+        <props.image class="rounded-2xl" />
       </a>
       <div class="md:mx-5">
-        <div class="text-center my-3 text-sm md:h-1/4 md:text-lg">
-          <p>{date}</p>
-          {props.editedDate && <p>Last edited: {editedDate}</p>}
-        </div>
+        <p class="text-center my-3 text-sm md:h-1/4 md:text-lg">
+          {date} {props.editedDate ? ` — version of ${editedDate}` : null}
+        </p>
         <a
           href={"/posts/" + props.slug}
-          class="text-lg block text-justify md:flex md:flex-col md:justify-center md:h-1/2 md:text-2xl"
+          class="text-lg block text-center md:flex md:flex-col md:justify-center md:h-1/2 md:text-2xl"
         >
           {props.title}
         </a>

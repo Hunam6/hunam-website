@@ -1,10 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead } from "@builder.io/qwik-city";
-import { Image } from "@unpic/qwik";
-import { Info, type InfoProps } from "~/components/cards/info";
+import Me from "~/media/me.png?jsx";
+import { Infocard, type InfocardProps } from "~/components/InfoCard/infocard";
 
 export default component$(() => {
-  const infos: InfoProps[] = [
+  const infos: InfocardProps[] = [
     {
       name: "Name",
       value: "Elie Tattevin-Drevet",
@@ -41,16 +41,17 @@ export default component$(() => {
 
   return (
     <>
-      <section class="md:flex md:items-center">
-        <Image
+      <section class="md:flex md:items-center mt-24 md:mt-auto">
+        <Me class="md:h-screen" />
+        {/* <Image
           src="https://a.storyblok.com/f/237087/4000x4900/f6eeecc0d2/me.png"
           width="4000"
           height="4900"
           class="md:!w-auto md:!h-[100vh]"
-        />
+        /> */}
         <div class="flex flex-col gap-5 mx-5 mt-5 md:w-full md:mx-28 md:gap-7">
           {infos.map((info, idx) => (
-            <Info {...info} key={idx} />
+            <Infocard {...info} key={idx} />
           ))}
         </div>
       </section>

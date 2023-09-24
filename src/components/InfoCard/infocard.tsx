@@ -1,12 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 
-export interface InfoProps {
+export interface InfocardProps {
   name: string;
   value: string;
   URL?: string;
 }
 
-export const Info = component$<InfoProps>((props) => {
+export const Infocard = component$<InfocardProps>((props) => {
   return (
     <article class="flex justify-between text-lg md:text-2xl">
       <p>{props.name}</p>

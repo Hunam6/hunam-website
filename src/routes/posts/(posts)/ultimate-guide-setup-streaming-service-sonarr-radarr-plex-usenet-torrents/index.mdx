@@ -1,14 +1,9 @@
 ---
-title:
-  The Ultimate Guide to Setup Your Own Streaming Service with Sonarr, Radarr,
-  Plex... using Usenet/Torrents
-description:
-  Step-by-step guide to setting up your own movie/series streaming service using
-  Sonarr, Radarr, and Plex with Usenet/Torrents. Suitable for beginners and
-  power users.
+title: The Ultimate Guide to Setup Your Own Streaming Service with Sonarr, Radarr, Plex... using Usenet/Torrents
+description: Step-by-step guide to setting up your own movie/series streaming service using Sonarr, Radarr, and Plex with Usenet/Torrents. Suitable for beginners and power users.
 date: 2023-02-03T22:36:51.570Z
-lastmod: 2023-06-20T21:03:18.694Z
-draft: true
+lastmod: 2023-09-24T21:25:40.789Z
+draft: false
 slug: ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents
 keywords:
   - netflix
@@ -21,9 +16,19 @@ keywords:
   - usenet
 ---
 
+import PlexHomePage from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/plex-homepage.png?jsx";
+import Speedtest from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/speedtest.png?jsx";
+import CloudflareDNSConfigPanelBefore from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/cf-dns-config-panel-before.png?jsx";
+import CloudflareDNSConfigPanelAfter from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/cf-dns-config-panel-after.png?jsx";
+import CommonConfigPanel from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/common-config-panel.png?jsx";
+import UsenetInfo from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/usenet-info.png?jsx";
+import UsenetConf from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/usenet-conf.png?jsx";
+import ProwlarrForm from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/prowlarr-form.png?jsx";
+import Congrats from "~/media/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/congrats.gif?jsx";
+
 # The Ultimate Guide to Setup Your Own Streaming Service with Sonarr, Radarr, Plex... using Usenet/Torrents
 
-![Article banner](https://a.storyblok.com/f/237087/2001x1127/f253d22450/plex-homepage.png)
+<PlexHomePage alt="Plex homepage" />
 
 > This guide provides a step-by-step approach to setting up your own movie and series streaming service using Sonarr, Radarr, Overseer, and Plex. Whether you prefer using Usenet or torrents, this guide has got you covered. Designed for both beginners and power users, the guide will help you stream your favorite movies and series with ease. Say goodbye to the hassle of unreliable streaming services and hello to endless entertainment with the help of this ULTIMATE Guide.
 
@@ -60,7 +65,7 @@ Your server will store movies and series, this uses a lot of storage, therefore 
 
 Also you **must** be careful of the connection speed available (in Mbps or Gbps). In my opinion your server must have at least 500 Mps even if 1 Gbps is always better. For example I personally have 4 Gbps.
 
-![My server's speedtest](https://a.storyblok.com/f/237087/750x400/39985592da/speedtest.png)
+<Speedtest alt="My server's speedtest" />
 
 I also recommend having more than 2 GB of RAM available.
 
@@ -231,7 +236,7 @@ SABnzbd & Flood/rTorrent--move to library-->Plex
 Plex--accessible to-->User
 ```
 
-The graph above is a simplified version, if you want to understand the architecture more deeply extent the one below.
+The graph above is a simplified version, if you want to understand the architecture more deeply extend the one below.
 
 <details>
 <summary>Real architecture</summary>
@@ -467,11 +472,11 @@ You can freely skip this part if you don't have a domain name or don't want to s
 
 Connect to your DNS provider dashboard. It will look similar to this:
 
-![Cloudflare DNS configuration panel before configuration](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/cf-dns-config-panel-before.png)
+<CloudflareDNSConfigPanelBefore alt="Cloudflare's DNS configuration panel before configuration" />
 
 You need to add a _A record_ for every subdomain, the content of the record will be your server's IP address. It will look similar to this:
 
-![Cloudflare DNS configuration panel after configuration](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/cf-dns-config-panel-after.png)
+<CloudflareDNSConfigPanelAfter alt="Cloudflare's DNS configuration panel after configuration" />
 
 ### Setup Caddy
 
@@ -547,7 +552,7 @@ sudo caddy start
 > **Warning**
 > In the guide you will often find configuration panels similar to this one:
 >
-> ![Common configuration panel](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/common-config-panel.png)
+> <CommonConfigPanel alt="Configuration panel common to all the *arr apps" />
 >
 > You will always need to set host to `<service-name>.<your-domain-name>` instead of what asked, port to `443` instead of what asked and check the `SSL` checkbox.
 
@@ -585,11 +590,11 @@ Select the desired language, click _Start Wizard_.
 
 Configure the fields according to what your Usenet providers gives you. For example with those information:
 
-![Demo Usenet provider information](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/usenet-info.png)
+<UsenetInfo alt="Demo of a Usenet provider information" />
 
 I would setup SABnzbd like this:
 
-![Demo SABnzbd configuration](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/usenet-conf.png)
+<UsenetConf alt="How to configure Usenet according to the demo information" />
 
 Click _Test Server_ to make sure you entered the fields correctly, click _Next_, click _Go to SABnzbd_, click the top-right gear icon, click _General_.
 
@@ -636,9 +641,11 @@ Click _Add indexer_ on the top panel, search for the Usenet or torrent indexers 
 
 > **Note**
 > In my case I search for `NZBgeek` and fill this form with my NZBgeek's API key.
-> ![Prowlarr form](/assets/posts/ultimate-guide-setup-streaming-service-sonarr-radarr-plex-usenet-torrents/prowlarr-form.png)
-> I also want this indexer to have the most priority so I set the _Indexer priority_ field to `1`.
-> Then I want to add a french torrent indexer but with a priority set to `2` etc.
+>
+> <ProwlarrForm alt="The Prowlarr indexer's setup form" />I also want this
+> indexer to have the most priority so I set the _Indexer priority_ field to
+> `1`. Then I want to add a french torrent indexer but with a priority set to
+> `2` etc.
 
 > **Note**
 > If you don't know what Usenet/torrent indexers to use, set the _Privacy_ filter to `Public` and add some.
@@ -968,7 +975,14 @@ This guide has been a long time in the planning and writing process. If you enjo
 
 ---
 
-**_Made by ❤️ with 🌸 power by [@Hunam6](https://github.com/hunam6)._**
+<img
+  src="https://media1.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif"
+  alt="A wholesome GIF from The Office where Pam and Jim remotely high five"
+  width="480"
+  height="400"
+/>
+
+**_Made with 🌸 power by [@Hunam6](https://github.com/hunam6)._**
 
 <script
   src="https://giscus.app/client.js"
