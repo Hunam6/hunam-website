@@ -19,9 +19,12 @@ export const Projectcard = component$<ProjectcardProps>((props) => {
         <p class="whitespace-nowrap ">{props.role}</p>
       </div>
       <p class="mb-2 md:text-2xl md:mb-5">{props.description}</p>
-      {props.img ? (
-        <props.img class="rounded-lg mt-4 md:rounded-2xl" alt={props.imgAlt} />
-      ) : null}
+      {props.img && (
+        <props.img
+          class="rounded-lg my-4 mx-auto md:rounded-2xl"
+          alt={props.imgAlt}
+        />
+      )}
       <a
         href={props.link}
         class="flex items-center gap-1 border-2 border-transparent text-orange-300 rounded-full px-2 w-fit justify-end mr-0 ml-auto md:text-2xl md:mb-1"

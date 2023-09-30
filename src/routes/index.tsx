@@ -5,7 +5,9 @@ import {
   type ProjectcardProps,
 } from "~/components/ProjectCard/projectcard";
 import Flower from "~/media/flower.jpg?jsx";
-import Fdf from "~/media/fdf.png?jsx";
+import Minishell from "~/media/projects/minishell.png?jsx";
+import Fdf from "~/media/projects/fdf.png?jsx";
+import Goodgle from "~/media/projects/goodgle.png?jsx";
 import { Scrolldownicon } from "~/components/ScrollDownIcon/scrolldownicon";
 
 export default component$(() => {
@@ -16,6 +18,15 @@ export default component$(() => {
       description:
         "A complex tool to translate code in Go to V. It's an official project from the V-lang organization.",
       link: "https://github.com/vlang/go2v",
+    },
+    {
+      name: "Minishell",
+      role: "Duo project",
+      description:
+        "A Unix shell supporting a subset of Bash features with high fidelity.",
+      link: "https://github.com/flowerbuddies/minishell",
+      img: $(Minishell),
+      imgAlt: "A screenshot of the Minishell running nicely",
     },
     {
       name: "FdF",
@@ -32,6 +43,16 @@ export default component$(() => {
       description:
         "A “meta-search engine” based on Google results providing huge privacy and a beautiful UI/UX.",
       link: "https://github.com/hunam6/goodgle",
+      img: $(Goodgle),
+      imgAlt:
+        'A screenshot of the Goodgle search engine with "Minecraft" as a query',
+    },
+    {
+      name: "C++ Modules",
+      role: "Solo project",
+      description:
+        "A series of 35 C++ exercises, from the most simple one to the most complex and challenging ones.",
+      link: "https://github.com/hunam6/cpp-modules",
     },
     {
       name: "V-lang",
