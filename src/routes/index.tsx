@@ -51,7 +51,7 @@ export default component$(() => {
       name: "C++ Modules",
       role: "Solo project",
       description:
-        "A series of 35 C++ exercises, from the most simple one to the most complex and challenging ones.",
+        "A series of 35 C++ exercises, from the simplest to the most complex and challenging ones.",
       link: "https://github.com/hunam6/cpp-modules",
     },
     {
@@ -77,11 +77,18 @@ export default component$(() => {
             developer.
           </h1>
         </div>
-        <h2 class="mx-10 mt-16 text-lg md:ml-80 md:mr-[50%] md:text-2xl">
-          Hi! I'm Elie Tattevin-Drevet (aka{" "}
-          <Link href="https://github.com/hunam6">Hunam</Link>
-          ). I'm a software engineer born in France and living in Finland.
+        <h2 class="mx-10 mt-16 mb-8 text-lg md:ml-80 md:mr-[50%] md:text-2xl md:mb-12">
+          Hi! I'm Elie Tattevin-Drevet.
+          <br /> A passionate developer, excellent problem solver and super-fast
+          learner. Strong team player.
         </h2>
+        <Link
+          href="/Resume.pdf"
+          class="border-orange-300 border-2 rounded-full text-lg font-bold
+          block w-fit mx-auto px-5 py-2 md:ml-80"
+        >
+          Download my Resumé
+        </Link>
         <Link href="#next" scroll={false}>
           <Scrolldownicon class="mx-auto w-auto h-16 my-10 md:absolute md:left-0 md:right-0 md:bottom-5" />
         </Link>
