@@ -1,4 +1,4 @@
-import { component$, $ } from "@builder.io/qwik";
+import { component$, $, useSignal } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import {
   Projectcard,
@@ -73,6 +73,8 @@ export default component$(() => {
     },
   ];
 
+  const ResumeButton = useSignal("Download my Resumé");
+
   return (
     <>
       <section>
@@ -93,11 +95,12 @@ export default component$(() => {
           learner. Strong team player.
         </h2>
         <Link
+          onClick$={() => (ResumeButton.value = "Downloading...")}
           href="/Resume.pdf"
           class="border-orange-300 border-2 rounded-full text-lg font-bold
           block w-fit mx-auto px-5 py-2 md:ml-80"
         >
-          Download my Resumé
+          {ResumeButton.value}
         </Link>
         <Link href="#next" scroll={false}>
           <Scrolldownicon class="mx-auto w-auto h-16 my-10 md:absolute md:left-0 md:right-0 md:bottom-5" />
