@@ -6,6 +6,7 @@ import {
 } from "~/components/ProjectCard/projectcard";
 import Flower from "~/media/flower.jpg?jsx";
 import Minishell from "~/media/projects/minishell.png?jsx";
+import Website from "~/media/projects/website.png?jsx";
 import Fdf from "~/media/projects/fdf.png?jsx";
 import Goodgle from "~/media/projects/goodgle.png?jsx";
 import { Scrolldownicon } from "~/components/ScrollDownIcon/scrolldownicon";
@@ -29,13 +30,11 @@ export default component$(() => {
       imgAlt: "A screenshot of the Minishell running nicely",
     },
     {
-      name: "FdF",
+      name: "C++ Modules",
       role: "Solo project",
       description:
-        "A 3D wire-frame renderer written in C using a very low-level graphics library.",
-      link: "https://github.com/hunam6/fdf",
-      img: $(Fdf),
-      imgAlt: "A screenshot of the FdF project in action",
+        "A series of 35 C++ exercises, from the simplest to the most complex and challenging ones.",
+      link: "https://github.com/hunam6/cpp-modules",
     },
     {
       name: "Goodgle",
@@ -48,11 +47,22 @@ export default component$(() => {
         'A screenshot of the Goodgle search engine with "Minecraft" as a query',
     },
     {
-      name: "C++ Modules",
+      name: "FdF",
       role: "Solo project",
       description:
-        "A series of 35 C++ exercises, from the simplest to the most complex and challenging ones.",
-      link: "https://github.com/hunam6/cpp-modules",
+        "A 3D wire-frame renderer written in C using a very low-level graphics library.",
+      link: "https://github.com/hunam6/fdf",
+      img: $(Fdf),
+      imgAlt: "A screenshot of the FdF project in action",
+    },
+    {
+      name: "Personal Website",
+      role: "Solo project",
+      description:
+        "My personal website/portfolio, built by hand using modern technologies.",
+      link: "https://github.com/hunam6/hunam-website",
+      img: $(Website),
+      imgAlt: "A screenshot of the screenshot of the screenshot of the ...",
     },
     {
       name: "V-lang",
