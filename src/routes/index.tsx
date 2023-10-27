@@ -7,6 +7,7 @@ import {
 import Flower from "~/media/flower.jpg?jsx";
 import Minishell from "~/media/projects/minishell.png?jsx";
 import Website from "~/media/projects/website.png?jsx";
+import Cub3d from "~/media/projects/cub3d.png?jsx";
 import Fdf from "~/media/projects/fdf.png?jsx";
 import Goodgle from "~/media/projects/goodgle.png?jsx";
 import { Scrolldownicon } from "~/components/ScrollDownIcon/scrolldownicon";
@@ -45,6 +46,15 @@ export default component$(() => {
       img: $(Goodgle),
       imgAlt:
         'A screenshot of the Goodgle search engine with "Minecraft" as a query',
+    },
+    {
+      name: "Cub3d",
+      role: "Duo project",
+      description:
+        "A 3D game rendered using raycasting, similar to the Wolfenstein 3D game using a very low-level graphics library.",
+      link: "https://github.com/flowerbuddies/cub3d",
+      img: $(Cub3d),
+      imgAlt: "A screenshot of the Cub3d project in action",
     },
     {
       name: "FdF",
@@ -96,7 +106,7 @@ export default component$(() => {
         </h2>
         <Link
           onClick$={() => (ResumeButton.value = "Downloading...")}
-          href="/Resume.pdf"
+          href="/resume.pdf"
           class="border-orange-300 border-2 rounded-full text-lg font-bold
           block w-fit mx-auto px-5 py-2 md:ml-80"
         >
