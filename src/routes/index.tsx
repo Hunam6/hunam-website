@@ -106,7 +106,7 @@ export default component$(() => {
         </h2>
         <Link
           onClick$={() => (ResumeButton.value = "Downloading...")}
-          href="/resume.pdf"
+          href="/CV_Elie_Tattevin-Drevet.pdf"
           class="border-orange-300 border-2 rounded-full text-lg font-bold
           block w-fit mx-auto px-5 py-2 md:ml-80"
         >
