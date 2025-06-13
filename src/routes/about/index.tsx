@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead } from "@builder.io/qwik-city";
-import Me from "~/media/me.png?jsx";
+import Me from "~/media/me.jpeg?jsx";
 import { Infocard, type InfocardProps } from "~/components/InfoCard/infocard";
 
 export default component$(() => {
