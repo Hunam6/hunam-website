@@ -31,13 +31,13 @@ export default component$(() => {
     },
     {
       name: "Email",
-      value: "hunam@disroot.org",
-      URL: "to:hunam@disroot.org",
+      value: "website@hunam.me",
+      URL: "to:website@hunam.me",
     },
     {
-      name: "Twitter",
+      name: "Twitter/X",
       value: "hunam_",
-      URL: "https://twitter.com/hunam_",
+      URL: "https://x.com/hunam_",
     },
     {
       name: "Discord",
