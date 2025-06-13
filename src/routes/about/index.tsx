@@ -4,6 +4,16 @@ import Me from "~/media/me.png?jsx";
 import { Infocard, type InfocardProps } from "~/components/InfoCard/infocard";
 
 export default component$(() => {
+  function calculateAge() {
+    const birthDate = new Date(2004, 9, 3);
+    const today = new Date();
+    const age =
+      today.getFullYear() -
+      birthDate.getFullYear() -
+      (today < new Date(today.getFullYear(), 9, 3) ? 1 : 0);
+    return age;
+  }
+
   const infos: InfocardProps[] = [
     {
       name: "Name",
@@ -35,7 +45,7 @@ export default component$(() => {
     },
     {
       name: "Age",
-      value: "18",
+      value: calculateAge().toString(),
     },
   ];
 
@@ -43,12 +53,6 @@ export default component$(() => {
     <>
       <section class="md:flex md:items-center mt-24 md:mt-auto">
         <Me class="md:h-screen" />
-        {/* <Image
-          src="https://a.storyblok.com/f/237087/4000x4900/f6eeecc0d2/me.png"
-          width="4000"
-          height="4900"
-          class="md:!w-auto md:!h-[100vh]"
-        /> */}
         <div class="flex flex-col gap-5 mx-5 mt-5 md:w-full md:mx-28 md:gap-7">
           {infos.map((info, idx) => (
             <Infocard {...info} key={idx} />
